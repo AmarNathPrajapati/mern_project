@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration form</title>
+    {{>header_links}}
+</head>
+<body>
+    {{>navbar}}
+    <div class="container">
+        <h2>Register your form</h2>
+        <form action="/register" method="POST">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" name="name" class="form-control" id="name">
+            </div>
+            <div class="mb-3">
+                <label for="mobile" class="form-label">Mobile No.</label>
+                <input type="tel" name="phone" class="form-control" id="mobile">
+            </div>
+            <div class="mb-3">
+                <label for="gender" class="form-label">Gender</label> <br>
+                <input type="radio" name="gender" value="1"><span>Male</span>
+                <input type="radio" name="gender" value="2"><span>Female</span>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" id="password">
+            </div>
+            <div class="mb-3">
+                <label for="cpassword" class="form-label">Confirm Password</label>
+                <input type="password" name="cpassword" class="form-control" id="cpassword">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    {{>scripts}}
+</body>
+</html>
